@@ -1,0 +1,117 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto|Ubuntu&subset=cyrillic');
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #F5EFED;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	color: #000;
+	-webkit-font-smoothing:antialiaset;
+
+}
+
+header {
+	background-image:url(../img/header_m.png);
+	background-size:cover;
+	min-height: 400px;
+	margin: 0;
+
+}
+
+.top_line{
+	width: 100%;
+	min-height: 80px;
+	background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+.col-md-5 h1 {
+	font-family:'Ubuntu', sans-serif;
+	color: #fff;
+	font-size: 60px;
+}
+
+.col-md-5 li
+ {
+	font-family:'Ubuntu', sans-serif;
+	color: #fff;
+	font-size: 20px;
+	list-style: none;
+	display: inline-block;
+	margin: 35px 15px 0 0;
+}
+
+div h2 
+{
+text-align: center;
+text-transform: uppercase;
+padding: 20px 0 20px;
+font-size: 30px;
+font-weight: bold;
+color:#fff;
+margin: 0;
+}
+
+.fig {
+display: block;
+text-align: center;
+
+}
+
+.fig img {
+	height: 300px;
+	width: 300px;
+	border: 15px solid #464947;
+	background-size: cover;
+	border-radius: 150px;
+	margin-top: -130px;
+
+
+}
+
+
+.about_me 
+{
+	background-color: #464947;
+}
+
+ .pont h3
+ {
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+}
+
+.me p{
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	text-align: justify;
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+.work {
+	background-image: url(../img/project.jpg);
+	background-size:cover;
+	min-height: 500px;
+	margin: 0;
+}
+.work h2{
+	text-align: center;
+	text-transform: uppercase;
+	padding: 55px 0 40px;
+	font-size: 30px;
+	font-weight: bold;
+	color:#464947;
+	margin: 0;
+}
+
+.prim img {
+	max-width: 100%;
+}

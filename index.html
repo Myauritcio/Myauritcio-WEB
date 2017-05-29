@@ -10,11 +10,26 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+
 	<script src="js/common.js"></script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
-	<script src="http://www.xiper.net/examples/js-plugins/gallery/fancybox/js/jquery.fancybox-1.3.4.js"></script>
-	<script src="js/fancybox/jquery.fancybox.js"></script>
-	<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" />
+
+	<link rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox.css" media="screen">
+	<script type="text/javascript" src="js/fancybox/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="js/fancybox/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/fancybox/jquery.fancybox-1.2.1.pack.js"></script>
+	<script type="text/javascript">	$(document).ready(function() {$("a.gallery").fancybox();});</script>
+	<script>
+  function slowScroll (id) {
+	var offset = 0;
+	$('html, body').animate ({
+	  scrollTop: $(id).offset ().top - offset
+	}, 500);
+	return false;
+  }
+  </script>
+	</script>
+	
+
 
 </head>
 <body>
@@ -28,9 +43,9 @@
 					<div class="col-md-2"></div>
 					<div class="col-md-5">
 						<ul>
-							<li class="tab">Обо мне</li>
-							<li class="tab">Работы</li>
-							<li class="tab">Контакты</li>
+							<li class="tab"><a href="javascript:void(0)" onclick="slowScroll('#me')">Обо мне </a></li>
+							<li class="tab"><a href="javascript:void(0)" onclick="slowScroll('#work')">Работы</a></li>
+							<li class="tab"><a href="javascript:void(0)" onclick="slowScroll('#contact')">Контакты</a></li>
 						</ul>
 					</div>
 				</div>			
@@ -48,21 +63,22 @@
 			<div class="col-md-4"></div>
 			<div class="col-md-4">
 				<figure class="fig">
-   					<img src="img/I.png" alt="Myauritcio" />
-   				</figure>
-   			</div>
+					<img src="img/I.png" alt="Myauritcio" />
+				</figure>
+			</div>
 			<div class="col-md-4"></div>
 		</div>
 	</div>
-		<div class="me">
+		<div class="me" id="me">
 			<h2>Обо мне</h2>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-1"></div>
 					<div class="col-md-10"><p>Добрый день! Меня зовут Мавлет и я с удовольствием помогу Вам сверстрать лендинг, визитку, сайт-портфолио, резюме или личный сайт.</p>
-					<p>В 2012 году я окончил Магнитогорский госудорственный университет факультет информатики. Долгое время работал в различных компаниях, нарабатывая необходимый опыт и теперь я готов работать с Вами напрямую.</p>
+					<p>В 2012 году я окончил Магнитогорский госудорственный университет факультет информатики. Долгое время работал в различных компаниях, накапливая необходимый опыт, и теперь я готов сотрудничать с Вами напрямую.</p>
 					<p>При верстке используются CSS3, jQuery, Bootstrap и прочие  инструменты, благодаря которым Ваш сайт будет красивым, легким и адаптивным к различным экранам.</p>
 					<p>Ниже Вы можете отзнакомиться с примерами моих работ и выбрать удобный способ связи со мной.</p>
+					<br/><br/>
 					</div>
 					<div class="col-md-1"></div>
 				</div>
@@ -70,14 +86,14 @@
 			
 		</div>
 	</div>
-	<div class="work">
+	<div class="work" id="work">
 		<h2>Примеры работ</h2>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
 					<div class="prim">
-						<a href="img/medsait_big.png" class="fancybox">
-							<img src="img/medsait_big.png" alt="">
+						<a class="gallery" rel="group" href="img/medsait_big.png">
+							<img src="img/medsait_big.png" alt="" />
 						</a>
 					</div>
 				</div>
@@ -91,5 +107,42 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="contact" id="contact">
+		<h2>Связаться со мной</h2>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<form class="contact_form" action="contact-form.php" method="post">
+			
+						<input type="text"  name="name" placeholder="Ваше имя" required />
+						<br>
+			
+						<input type="email" name="email" placeholder="Ваш email" required />
+						<br>
+			
+						<textarea name="message" cols="40" rows="6" placeholder="Ваше сообщение" 
+ 						required ></textarea>
+						<br>
+
+						<input name="bezspama" type="text" placeholder="4+4+4+2=" required />
+						<br>
+						<button class="submit" type="submit">Отправить</button>
+
+						</form>
+				</div>
+				<div class="col-md-6">
+					<p>Если Вы заинтересованы в сотрудничестве со мной, то можете прямо сейчас отправить мне сообщение через форму на сайте или же написать мне в ВК.</p>
+					
+					<div class="point"> <a href="https://vk.com/mavlet"><i class="fa fa-vk" aria-hidden="true" alt="Написать мне в ВК" title="Написать мне в ВК"></i></a></div>
+					
+				</div>
+			</div>
+		</div>
+			
+	</div>
+	<div class="bottom">
+	<div class="cop">© 2017 Мавлет Юлмухаметов </div>
+		</div>
 </body>
 </html>

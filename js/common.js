@@ -35,7 +35,13 @@ $(document).ready(function() {
 	//Документация: http://fancybox.net/howto
 	//<a class="fancybox"><img src="image.jpg" /></a>
 	//<a class="fancybox" data-fancybox-group="group"><img src="image.jpg" /></a>
-	$(".fancybox").fancybox();
+	
+	
+	$(document).ready(function() {
+    	$("a.gallery").fancybox();
+	});
+
+	
 
 	//Навигация по Landing Page
 	//$(".top_mnu") - это верхняя панель со ссылками.
